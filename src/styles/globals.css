@@ -3,31 +3,75 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-primary: #262626;
+  --color-light-gray: #f5f5f5;
+  --color-mid-light-gray: #EDEDED;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#__next {
+  min-width: 100vw;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.ant-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-btn-primary {
+  box-shadow: none !important;
+  background-color: var(--color-primary) !important;
+}
+
+.ant-drawer-content-wrapper {
+  width: fit-content !important;
+  max-width: 90% !important;
+}
+
+.ant-drawer-body {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between;
+}
+
+.ant-color-picker-trigger .ant-color-picker-color-block {
+  width: 96% !important;
+  height: 96% !important;
+}
+
+.ant-color-picker-trigger-active {
+  border: none !important;
+}
+
+.ant-select-item-option-selected {
+  background-color: var(--color-light-gray) !important;
+}
+
+.ant-color-picker-trigger {
+  background-color: transparent;
+  border: none;
+  border-radius: 17% !important;
+}
+
+.ant-color-picker-trigger .ant-color-picker-color-block, .ant-color-picker-trigger .ant-color-picker-color-block-inner {
+  border-radius: 15% !important; 
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ant-slider {
+  margin-top: 0;
+  margin-bottom: 0;
 }
