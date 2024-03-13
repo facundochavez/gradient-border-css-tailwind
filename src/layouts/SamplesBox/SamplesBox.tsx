@@ -17,7 +17,7 @@ const SamplesBox = () => {
     },
     {
       id: 4,
-      colors: ['#A2FF00', '#FFE000', '#FF6700', '#DF00FF'],
+      colors: ['#FFE600', '#FF00F9', '#4400FF'],
     },
     {
       id: 5,
@@ -33,11 +33,23 @@ const SamplesBox = () => {
     },
     {
       id: 8,
-      colors: ['#FFE600', '#FF00F9', '#4400FF'],
+      colors: ['#A2FF00', '#FFE000', '#FF6700', '#DF00FF'],
     },
     {
       id: 9,
       colors: ['#5C25FF', '#00C9FF'],
+    },
+    {
+      id: 10,
+      colors: ['#A2FF00', '#00C9FF', '#FF00F9', '#FF0037'],
+    },
+    {
+      id: 11,
+      colors: ['#00C9FF', '#4400FF', '#FF00F9'],
+    },
+    {
+      id: 12,
+      colors: ['#00C9FF', '#FFE600', '#00C9FF'],
     },
   ];
 

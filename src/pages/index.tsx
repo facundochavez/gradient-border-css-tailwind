@@ -6,6 +6,7 @@ import ColorsPicker from '@/layouts/ColorsPicker/ColorsPicker';
 import BorderSettings from '@/layouts/BorderSettings/BorderSettings';
 import CodeBox from '@/layouts/CodeBox/CodeBox';
 import Footer from '@/layouts/Footer/Footer';
+import TestBox from '@/layouts/TestBox/TestBox';
 
 export default function Home() {
   return (

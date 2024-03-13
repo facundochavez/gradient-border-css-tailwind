@@ -37,17 +37,15 @@ const CodeProvider = ({ children }: CodeProviderProps) => {
       index: 0,
       name: 'CSS',
       tabRef: tab1Ref,
-      value: `.gradient-border {
+      value: `.gradient_border {
     position: relative;
     border: ${borderWidth}px solid transparent;
     border-radius: ${borderRadius}px;
 }
     
-.gradient-border::before {
+.gradient_border::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     border: inherit;
@@ -65,21 +63,29 @@ const CodeProvider = ({ children }: CodeProviderProps) => {
       index: 1,
       name: 'Tailwind',
       tabRef: tab2Ref,
-      value: `<div //STYLE THIS WRAPPER
-  className='relative w-10 h-10 border-[${borderWidth}px solid transparent] border-radius-[${borderRadius}px]'> 
+      value: `<div class='relative'>
   <div //KEEP THIS DIV FIRST
-    className='absolute w-full h-full border-[inherit] border-radius-[inherit]'
+    class='absolute w-full h-full'
     style={{
-      background: 'linear-gradient(90deg,${colorsText}) border-box',
+      border: '${borderWidth}px solid transparent',
+      borderRadius: '${borderRadius}px',
+      background:
+        'linear-gradient(${gradientAngle}deg,${colorsText}) border-box',
       mask: 'linear-gradient(white, white) padding-box, linear-gradient(white, white)',
       maskComposite: 'exclude',
     }}
   />
-  <div className='absolute w-full h-full border-[inherit] border-radius-[inherit]'>
-     //YOUR CONTENT HERE
+  <div //STYLE THIS DIV
+    class='p-4 flex items-center justify-center'
+    style={{
+      borderWidth: '${borderWidth}px solid transparent',
+      borderRadius: '${borderRadius}px',
+    }}
+  >
+    YOUR CONTENT HERE
   </div>
 </div>`,
-      extensions: [javascript()],
+      extensions: [javascript({ jsx: true })],
     },
   ];
   const [selectedCode, setSelectedCode] = useState<number>(0);

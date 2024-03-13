@@ -1,0 +1,24 @@
+.gradient_border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    border: 5px solid transparent;
+    border-radius: 15px;
+}
+    
+.gradient_border::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: inherit;
+    border-radius: inherit;
+    
+    background: linear-gradient(90deg, #5FFF00 0%, #00C9FF 100%) border-box;
+    mask:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(white, white);
+    mask-composite: exclude;
+}

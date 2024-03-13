@@ -9,8 +9,9 @@ const CodeBox = () => {
   const { codes, selectedCode } = useCodeContext();
 
   function copyToClipboard() {
+    navigator.clipboard.writeText(codes[selectedCode].value);
     messageApi.open({
-      type: 'success',
+/*       type: 'success', */
       content: 'Copied to clipboard!',
     });
   }
@@ -23,21 +24,24 @@ const CodeBox = () => {
         <header className='w-full flex justify-between'>
           <CodeTabs />
           <Button
+            type='text'
             onClick={copyToClipboard}
             icon={
               <Image
                 src='/icons/copy-icon.svg'
                 alt='Copy Icon'
-                width={16}
-                height={16}
+                width={24}
+                height={24}
+                className='brightness-[10]'
               />
             }
             className='active:opacity-80'
-          >
-            Copy
-          </Button>
+          />
         </header>
-        <MyCodeMirror value={codes[selectedCode].value} extensions={codes[selectedCode].extensions} />
+        <MyCodeMirror
+          value={codes[selectedCode].value}
+          extensions={codes[selectedCode].extensions}
+        />
       </div>
     </>
   );
