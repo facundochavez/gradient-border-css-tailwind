@@ -26,7 +26,7 @@ const BorderSettings = () => {
       />
       <Slider
         min={0}
-        max={50}
+        max={30}
         value={borderWidth}
         onChange={setBorderWidth}
         tooltip={{ formatter: null }}
@@ -42,7 +42,7 @@ const BorderSettings = () => {
       />
       <Slider
         min={0}
-        max={50}
+        max={60}
         value={borderRadius}
         onChange={setBorderRadius}
         tooltip={{ formatter: null }}

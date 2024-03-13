@@ -1,8 +1,10 @@
+import CSSCode from '@/components/CSSCode/CSSCode';
 import CodeTab from '@/components/CodeTab/CodeTab';
+import TailwindCode from '@/components/TailwindCode/TailwindCode';
 import { Button, message } from 'antd';
 import Image from 'next/image';
 
-const CSSCode = () => {
+const CodeBox = () => {
   const [messageApi, contextHolder] = message.useMessage();
 
   function copyToClipboard() {
@@ -15,7 +17,7 @@ const CSSCode = () => {
   return (
     <>
       {contextHolder}
-      <div className='w-full h-[300px] bg-[var(--color-primary)] rounded-2xl flex flex-col p-5 pt-4 md:p-6 md:pt-5'>
+      <div className='w-full bg-[var(--color-primary)] rounded-2xl flex flex-col p-5 pt-4 md:p-6 md:pt-5 gap-5'>
         <header className='w-full flex justify-between'>
           <CodeTab />
           <Button
@@ -33,9 +35,10 @@ const CSSCode = () => {
             Copy
           </Button>
         </header>
+        <CSSCode />
       </div>
     </>
   );
 };
 
-export default CSSCode;
+export default CodeBox;

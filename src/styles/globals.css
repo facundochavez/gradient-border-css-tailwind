@@ -16,6 +16,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100vw;
+  min-width: 100%;
+  overflow-x: hidden;
+}
+
 #__next {
   min-width: 100vw;
   padding: 0 5%;
@@ -74,4 +81,41 @@
 .ant-slider {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.cm-editor {
+  background-color: transparent !important;
+  height: 400px;
+}
+
+.cm-editor * {
+  font-family: monospace !important;
+  font-size: 16px !important;
+}
+
+.cm-editor *::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.cm-editor *::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.cm-editor *::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+.cm-gutters {
+  width: 40px !important;
+  user-select: none !important;
+  background-color: var(--color-primary) !important;
+  transform: translate(-2px, 0) !important;
+}
+
+
+.cm-editor *::-webkit-scrollbar-corner {
+  display: none;
 }

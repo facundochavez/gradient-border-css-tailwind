@@ -11,7 +11,7 @@ const Header = () => {
       <Image
         src='/logo.svg'
         alt='Gradient Border CSS Logo'
-        width={240}
+        width={250}
         height={70}
         className='xs:w-[300px] sm:w-[350px] md:w-[350px]'
         priority
@@ -23,9 +23,9 @@ const Header = () => {
         <Image
           src='/icons/burguer-icon.svg'
           alt='Burguer Icon'
-          width={20}
+          width={25}
           height={25}
-          className='ml-2 xs:w-[25px]'
+          className='ml-2'
           onClick={() => setIsSideBarOpen(true)}
         />
       </aside>

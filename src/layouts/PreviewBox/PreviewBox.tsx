@@ -3,18 +3,19 @@ import { Button } from 'antd';
 import Image from 'next/image';
 import { useState } from 'react';
 
-const Preview = () => {
+const PreviewBox = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   //// COMPONENT
   return (
     <div
-      className={`w-full h-full rounded-2xl p-5 pt-4 flex flex-col gap-4 md:p-6 md:pt-5 ${
+      className={`relative w-full h-full rounded-2xl p-5 pt-4 flex flex-col gap-4 md:p-6 md:pt-5 ${
         isDarkMode
-          ? 'bg-[var(--color-primary)]'
+        ? 'bg-[var(--color-primary)]'
+        /* ? 'backdrop-invert' */
           : 'outline outline-2 outline-[var(--color-primary)]'
       }`}
     >
-      <header className='w-full flex justify-between'>
+      <header className='z-10 w-full flex justify-between'>
         <h2
           className={`text-xl font-semibold ml-1 text-light ${
             isDarkMode ? 'text-white' : 'text-[var(--color-primary)]'
@@ -58,4 +59,4 @@ const Preview = () => {
   );
 };
 
-export default Preview;
+export default PreviewBox;

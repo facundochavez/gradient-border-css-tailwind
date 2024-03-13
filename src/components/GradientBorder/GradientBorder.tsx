@@ -5,19 +5,9 @@ import { useEffect, useState } from 'react';
 const GradientBorder = () => {
   const { borderWidth, borderRadius, gradientAngle } =
     useBorderSettingsContext();
-  const { selectedColors } = useColorsContext();
-  const adaptedBorderWidth = Math.min(Math.max(borderWidth, 1), 50);
-  const adaptedBorderRadius = Math.min(Math.max(borderRadius, 0), 50);
-  const [colorsText, setColorsText] = useState('');
-
-  useEffect(() => {
-    let newColorsText = '';
-    const step = 100 / (selectedColors.length - 1);
-    for (let i = 0; i < selectedColors.length; i++) {
-      newColorsText += `${selectedColors[i].color} ${i * step}%${i<selectedColors.length-1?',' : ''}`;
-    }
-    setColorsText(newColorsText);
-  }, [selectedColors]);
+  const { colorsText } = useColorsContext();
+  const adaptedBorderWidth = Math.min(Math.max(borderWidth, 1), 30);
+  const adaptedBorderRadius = Math.min(Math.max(borderRadius, 0), 60);
 
   //// COMPONENT
   return (

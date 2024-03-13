@@ -17,6 +17,7 @@ export default function Document() {
           property='og:description'
           content='Review de la web de Filadd hecha por Facundo Chavez'
         /> */}
+        <meta name='google' content='notranslate' />
       </Head>
       <body className='relative h-screen w-screen bg-white'>
         <div className='absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#dfe1e5_1px,transparent_1px)] [background-size:16px_16px]'></div>

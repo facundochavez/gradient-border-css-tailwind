@@ -1,7 +1,7 @@
 import SampleBorder from '@/components/SampleBorder/SampleBorder';
-import styles from './Samples.module.css';
+import styles from './SamplesBox.module.css';
 
-const Samples = () => {
+const SamplesBox = () => {
   const sampleItems = [
     {
       id: 1,
@@ -58,4 +58,4 @@ const Samples = () => {
   );
 };
 
-export default Samples;
+export default SamplesBox;
