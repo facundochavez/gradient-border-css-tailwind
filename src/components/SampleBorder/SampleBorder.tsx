@@ -25,7 +25,7 @@ const SampleBorder = ({ colors }: { colors: string[] }) => {
         style={{
           border: `5px solid transparent`,
           borderRadius: `10px`,
-          background: `linear-gradient(90deg, ${colorsText}) border-box`,
+          background: `linear-gradient(90deg,${colorsText}) border-box`,
           mask: 'linear-gradient(white, white) padding-box, linear-gradient(white, white)',
           maskComposite: 'exclude',
         }}

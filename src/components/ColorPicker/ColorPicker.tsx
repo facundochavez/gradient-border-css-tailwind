@@ -1,9 +1,9 @@
 import { ColorItem, useColorsContext } from '@/context/colors.context';
-import { ColorPicker as AntdColorPicker, Button } from 'antd';
+import { ColorPicker, Button } from 'antd';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-const ColorPicker = ({ color, index }: { color: ColorItem; index: number }) => {
+const MyColorPicker = ({ color, index }: { color: ColorItem; index: number }) => {
   const { selectedColors, changeColor, deleteColor } = useColorsContext();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +33,7 @@ const ColorPicker = ({ color, index }: { color: ColorItem; index: number }) => {
   //// COMPONENT
   return (
     <div className='w-full aspect-square relative'>
-      <AntdColorPicker
+      <ColorPicker
         aria-label={`picker${index}`}
         onOpenChange={() => setIsOpen(!isOpen)}
         placement='bottom'
@@ -99,4 +99,4 @@ const ColorPicker = ({ color, index }: { color: ColorItem; index: number }) => {
   );
 };
 
-export default ColorPicker;
+export default MyColorPicker;

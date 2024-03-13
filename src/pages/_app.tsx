@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { ConfigProvider } from 'antd';
 import ColorsProvider from '@/context/colors.context';
 import BorderSettingsProvider from '@/context/borderSettings.context';
+import CodeProvider from '@/context/code.context';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <BorderSettingsProvider>
         <ColorsProvider>
-          <Component {...pageProps} />
+          <CodeProvider>
+            <Component {...pageProps} />
+          </CodeProvider>
         </ColorsProvider>
       </BorderSettingsProvider>
     </ConfigProvider>
