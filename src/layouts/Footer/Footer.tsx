@@ -2,7 +2,7 @@ const Footer = () => {
   //// COMPONENT
   return (
     <div className='w-screen h-[100px] bg-[var(--color-primary)] flex items-center flex-wrap justify-center px-6'>
-      <p className='flex flex-col items-center'>
+      <p className='flex flex-col items-center text-sm md:text-base'>
         <span className='text-white text-center text-pretty my-0'>
           Copyright © 2024{' '}
           <a
