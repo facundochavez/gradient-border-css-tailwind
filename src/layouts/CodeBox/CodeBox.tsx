@@ -11,7 +11,7 @@ const CodeBox = () => {
   function copyToClipboard() {
     navigator.clipboard.writeText(codes[selectedCode].value);
     messageApi.open({
-/*       type: 'success', */
+      /*       type: 'success', */
       content: 'Copied to clipboard!',
     });
   }

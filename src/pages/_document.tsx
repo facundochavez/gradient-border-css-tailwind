@@ -10,13 +10,13 @@ export default function Document() {
           content='App to generate gradient borders with CSS and Tailwind'
         />
         <link rel='icon' href='/favicon.svg' />
-        {/* <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta property='og:image' content='/filadd-og-image.png' />
-        <meta property='og:title' content='Filadd Review' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta property='og:image' content='/favicon.svg' />
+        <meta property='og:title' content='Gradient Border CSS & Tailwind' />
         <meta
           property='og:description'
-          content='Review de la web de Filadd hecha por Facundo Chavez'
-        /> */}
+          content='App to generate gradient borders with CSS and Tailwind'
+        />
         <meta name='google' content='notranslate' />
       </Head>
       <body className='h-screen w-screen bg-white'>

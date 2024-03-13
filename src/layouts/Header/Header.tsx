@@ -1,9 +1,15 @@
 import { Button, Drawer } from 'antd';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('resize', () => setIsSideBarOpen(false));
+    return () =>
+      window.removeEventListener('resize', () => setIsSideBarOpen(false));
+  }, []);
 
   //// COMPONENT
   return (
@@ -12,8 +18,8 @@ const Header = () => {
         src='/logo.svg'
         alt='Gradient Border CSS Logo'
         width={250}
-        height={70}
-        className='xs:w-[300px] sm:w-[350px] md:w-[350px]'
+        height={80}
+        className='w-[87%] sm:w-[360px] md:w-[380px] flex'
         priority
       />
       <aside className='hidden md:flex gap-2'>
@@ -38,19 +44,41 @@ const Header = () => {
         <header className='flex flex-col gap-2'>
           <CTAs />
         </header>
-        <h3>
-          Crafted by
-          <br /> Facundo Chavez
-        </h3>
+        <p className='flex flex-col items-center'>
+          <span className='text-center text-pretty my-0'>
+            Copyright © 2024{' '}
+            <a
+              href='https://facundochavez.com'
+              target='_blank'
+              className='pr-1 text-black underline focus:text-black focus:underline'
+            >
+              Facundo Chavez.
+            </a>
+          </span>
+          <span className='text-center text-pretty'>All rights reserved.</span>
+        </p>
       </Drawer>
     </nav>
   );
 };
 
 const CTAs = () => {
+  function shareApp() {
+    navigator.share({
+      title: 'Gradient Border CSS',
+      url: 'https://gradient-border.vercel.app/',
+    });
+  }
+
   return (
     <>
       <Button
+        onClick={() =>
+          window.open(
+            'https://github.com/facundochavez/gradient-border',
+            '_blank'
+          )
+        }
         type='primary'
         className='w-full'
         icon={
@@ -65,7 +93,9 @@ const CTAs = () => {
       >
         GitHub Repo
       </Button>
+
       <Button
+        onClick={shareApp}
         icon={
           <Image
             src='/icons/share-icon.svg'

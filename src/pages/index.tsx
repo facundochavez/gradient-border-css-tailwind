@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className='w-full max-w-[1000px] flex flex-col gap-5 md:gap-6'>
+      <main className='w-full max-w-[1000px] flex flex-col mb-8 gap-5 md:gap-6 '>
       <section className='w-full max-w-[1000px] flex flex-col gap-4 md:gap-6 md:flex-row'>
         <main className='w-full h-[250px] mt-[5px] md:h-[unset] md:min-h-full'>
           <PreviewBox />
@@ -29,7 +29,7 @@ export default function Home() {
         <CodeBox />
       </section>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
