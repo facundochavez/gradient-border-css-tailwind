@@ -104,11 +104,8 @@ const ColorsProvider = ({ children }: ColorsProviderProps) => {
 
   useEffect(() => {
     let newColorsText = '';
-    const step = Math.round(100 / (selectedColors.length - 1));
     for (let i = 0; i < selectedColors.length; i++) {
-      newColorsText += ` ${selectedColors[i].color} ${
-        i * step === 99 ? 100 : i * step
-      }%${i < selectedColors.length - 1 ? ',' : ''}`;
+      newColorsText += `${selectedColors[i].color}${i < selectedColors.length - 1 ? ',' : ''}`;
     }
     setColorsText(newColorsText);
   }, [selectedColors]);

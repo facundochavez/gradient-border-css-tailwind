@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 16px;
     position: relative;
     border: 5px solid transparent;
     border-radius: 15px;
@@ -16,7 +16,7 @@
     border: inherit;
     border-radius: inherit;
     
-    background: linear-gradient(90deg, #5FFF00 0%, #00C9FF 100%) border-box;
+    background: linear-gradient(90deg, #5FFF00, #00C9FF) border-box;
     mask:
         linear-gradient(white, white) padding-box,
         linear-gradient(white, white);

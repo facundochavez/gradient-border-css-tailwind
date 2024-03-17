@@ -65,22 +65,15 @@ const CodeProvider = ({ children }: CodeProviderProps) => {
       tabRef: tab2Ref,
       value: `<div class='relative'>
   <div //KEEP THIS DIV FIRST
-    class='absolute w-full h-full'
+    class='absolute w-full h-full border-[${borderWidth}px] border-transparent border-solid rounded-[${borderRadius}px]
+           bg-[linear-gradient(${gradientAngle}deg,${colorsText})] bg-origin-border'
     style={{
-      border: '${borderWidth}px solid transparent',
-      borderRadius: '${borderRadius}px',
-      background:
-        'linear-gradient(${gradientAngle}deg,${colorsText}) border-box',
       mask: 'linear-gradient(white, white) padding-box, linear-gradient(white, white)',
       maskComposite: 'exclude',
     }}
   />
-  <div //STYLE THIS DIV
-    class='p-4 flex items-center justify-center'
-    style={{
-      borderWidth: '${borderWidth}px solid transparent',
-      borderRadius: '${borderRadius}px',
-    }}
+  <div //STYLE THIS DIV KEEPING BORDER SETTINGS
+    class='border-[${borderWidth}px] border-transparent border-solid rounded-[${borderRadius}px]'
   >
     YOUR CONTENT HERE
   </div>
